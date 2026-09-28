@@ -144,15 +144,15 @@ h1.hero-title {
 
 .social-row { display: flex; gap: 10px; }
 .social-btn {
-  width: 44px; height: 44px;
-  border-radius: 14px;
+  width: 54px; height: 54px;
+  border-radius: 16px;
   background: var(--surface-var);
   border: 1px solid var(--outline);
   display: flex; align-items: center; justify-content: center;
   color: var(--on);
   transition: color 0.15s, border-color 0.15s;
 }
-.social-btn svg { width: 20px; height: 20px; }
+.social-btn svg { width: 25px; height: 25px; }
 .social-btn:hover { color: var(--accent); border-color: var(--accent); }
 
 .swatches { display: flex; align-items: center; gap: 10px; }
