@@ -15,13 +15,12 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --surface: #121212;
-    --surface-var: #1e1e1e;
-    --outline: #2c2c2c;
-    --on: #e3e3e3;
-    --on-var: #8e8e93;
+  :root:not([data-theme="light"]) {
+    --surface: #121212; --surface-var: #1e1e1e; --outline: #2c2c2c; --on: #e3e3e3; --on-var: #8e8e93;
   }
+}
+:root[data-theme="dark"] {
+  --surface: #121212; --surface-var: #1e1e1e; --outline: #2c2c2c; --on: #e3e3e3; --on-var: #8e8e93;
 }
 
 * { box-sizing: border-box; }
@@ -155,7 +154,7 @@ h1.hero-title {
 .social-btn svg { width: 20px; height: 20px; }
 .social-btn:hover { color: var(--accent); border-color: var(--accent); }
 
-.swatches { display: flex; align-items: center; gap: 8px; margin-top: 22px; color: var(--on-var); font-size: 0.82rem; }
+.swatches { display: flex; align-items: center; gap: 10px; }
 .swatch {
   width: 22px; height: 22px; border-radius: 50%;
   border: 2px solid var(--surface);
@@ -255,3 +254,69 @@ footer.site { margin-top: 24px; padding: 28px 0 40px; }
   .cta { padding: 30px 24px; }
   .legal-body { padding: 22px; }
 }
+
+
+/* ---------- Header: aspetto (tema + colore) ---------- */
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.prefs { position: relative; }
+.prefs summary {
+  list-style: none; cursor: pointer;
+  width: 40px; height: 40px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--surface-var); border: 1px solid var(--outline); color: var(--on);
+}
+.prefs summary::-webkit-details-marker { display: none; }
+.prefs summary svg { width: 20px; height: 20px; }
+.prefs[open] summary { border-color: var(--accent); color: var(--accent); }
+.prefs-panel {
+  position: absolute; right: 0; top: 50px; width: 260px; padding: 18px;
+  background: var(--surface-var); border: 1px solid var(--outline);
+  border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+.prefs-label { font-size: 0.78rem; font-weight: 600; color: var(--on-var); margin: 0 0 8px; }
+.prefs-label:not(:first-child) { margin-top: 16px; }
+.seg { display: flex; background: var(--outline); border-radius: 12px; padding: 3px; }
+.seg button {
+  flex: 1; border: 0; background: transparent; color: var(--on-var);
+  font: 500 0.82rem var(--font); padding: 7px 0; border-radius: 9px; cursor: pointer;
+}
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--accent); font-weight: 700; }
+
+/* ---------- Badge Google Play ---------- */
+.badge img { height: 56px; width: auto; }
+.badge { display: inline-block; transition: transform 0.15s; }
+.badge:hover { transform: translateY(-2px); }
+
+/* ---------- Hero shot ---------- */
+.hero-shot { display: flex; justify-content: center; }
+.hero-shot img { max-height: 560px; width: auto; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.18); }
+
+/* ---------- Feature grid (solo testo) ---------- */
+.feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.feat { padding: 26px; }
+.feat-icon {
+  width: 44px; height: 44px; border-radius: 14px; margin-bottom: 16px;
+  background: var(--surface); border: 1px solid var(--outline); color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+}
+.feat-icon svg { width: 22px; height: 22px; }
+.feat h3 { font-size: 1.05rem; margin: 0 0 8px; }
+.feat p { color: var(--on-var); font-size: 0.92rem; margin: 0; }
+
+/* ---------- Gallery ---------- */
+.gallery { display: flex; gap: 18px; overflow-x: auto; padding: 4px 24px 20px; scroll-snap-type: x proximity; }
+.gallery img, .gallery .ph {
+  height: 460px; width: auto; flex: 0 0 auto; border-radius: 22px;
+  scroll-snap-align: center; border: 1px solid var(--outline);
+}
+.gallery .ph { width: 230px; display: flex; align-items: center; justify-content: center; border-style: dashed; color: var(--on-var); font-size: 0.85rem; }
+
+/* ---------- Review ---------- */
+.review { padding: 44px; text-align: center; }
+.stars { display: flex; justify-content: center; gap: 6px; color: var(--accent); margin-bottom: 14px; }
+.stars svg { width: 28px; height: 28px; }
+.review h2 { margin: 0 0 8px; font-size: 1.6rem; }
+.review p { margin: 0 auto 24px; color: var(--on-var); max-width: 48ch; }
+
+@media (max-width: 860px) { .feat-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .feat-grid { grid-template-columns: 1fr; } .gallery img, .gallery .ph { height: 380px; } .review { padding: 30px 22px; } }
