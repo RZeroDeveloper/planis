@@ -8,8 +8,14 @@
 <meta property="og:title" content="Planis: Visited Countries Map">
 <meta property="og:description" content="Track your travels, keep a travel journal and view your world statistics.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="icon.png">
+<meta property="og:image" content="https://rzerodeveloper.github.io/planis-privacy/icon.png">
+<meta property="og:url" content="https://rzerodeveloper.github.io/planis-privacy/">
+<link rel="canonical" href="https://rzerodeveloper.github.io/planis-privacy/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Planis: Visited Countries Map","operatingSystem":"ANDROID","applicationCategory":"TravelApplication","downloadUrl":"https://play.google.com/store/apps/details?id=com.rzerodev.planis","url":"https://rzerodeveloper.github.io/planis-privacy/","author":{"@type":"Organization","name":"R. Zero Dev"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
 <link rel="icon" href="icon.png">
+<script src="script.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,8 +30,29 @@
       <svg style="display:none" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#0bc90f"/></svg>
       Planis
     </a>
-    <nav class="pill"><a href="#features">Features</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy</a></nav>
-    <a class="btn btn-primary btn-small" href="https://play.google.com/store/apps/details?id=com.rzerodev.planis" target="_blank" rel="noopener">Get the app</a>
+    <nav class="pill"><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy</a></nav>
+    <div class="header-actions">
+      <details class="prefs">
+        <summary aria-label="Appearance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor" stroke="none"/></svg></summary>
+        <div class="prefs-panel">
+          <div class="prefs-label">Theme</div>
+          <div class="seg" role="group" aria-label="Theme">
+            <button data-theme-set="system" aria-pressed="true">System</button>
+            <button data-theme-set="light" aria-pressed="false">Light</button>
+            <button data-theme-set="dark" aria-pressed="false">Dark</button>
+          </div>
+          <div class="prefs-label">Accent color</div>
+          <div class="swatches" role="group" aria-label="Accent color">
+            <button class="swatch" style="background:#0BC90F" data-c="#0BC90F" aria-label="Green" aria-pressed="true"></button>
+            <button class="swatch" style="background:#F18502" data-c="#F18502" aria-label="Orange" aria-pressed="false"></button>
+            <button class="swatch" style="background:#00EAFF" data-c="#00EAFF" aria-label="Cyan" aria-pressed="false"></button>
+            <button class="swatch" style="background:#A90CC4" data-c="#A90CC4" aria-label="Magenta" aria-pressed="false"></button>
+            <button class="swatch" style="background:#BD1207" data-c="#BD1207" aria-label="Red" aria-pressed="false"></button>
+          </div>
+        </div>
+      </details>
+      <a class="btn btn-primary btn-small" href="https://play.google.com/store/apps/details?id=com.rzerodev.planis" target="_blank" rel="noopener">Get the app</a>
+    </div>
   </div>
   <div class="fade-line"></div>
 </header>
@@ -38,25 +65,17 @@
         <h1 class="hero-title">Color the world you have <em>already seen.</em></h1>
         <p class="hero-sub">Planis is a travel tracker, trip planner and travel journal in one app. Mark visited countries on a hand-drawn world map, log every stop and see how much of the world you have explored.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.rzerodev.planis" target="_blank" rel="noopener">Get it on Google Play</a>
+          <a class="badge" href="https://play.google.com/store/apps/details?id=com.rzerodev.planis" target="_blank" rel="noopener"><img src="google-play-badge.png" alt="Get it on Google Play" onerror="var a=this.parentNode;a.className='btn btn-primary';a.textContent='Get it on Google Play'"></a>
           <a class="btn btn-ghost" href="#features">See features</a>
         </div>
         <div class="social-row">
-          <!-- TODO: replace each href="#" with your real profile link -->
+          <!-- TODO: replace each href="#" with the full URL of your profile -->
           <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="Planis on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
           <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="Planis on TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.5 3h2.6c.2 1.7 1.4 3.1 3.1 3.5v2.7c-1.3-.1-2.5-.5-3.5-1.2v6.4c0 3.1-2.5 5.6-5.6 5.6S5.5 17.5 5.5 14.4c0-3 2.3-5.4 5.2-5.6v2.8c-1.4.2-2.5 1.4-2.5 2.8 0 1.6 1.3 2.9 2.9 2.9s2.9-1.3 2.9-2.9V3z"/></svg></a>
           <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="Planis on Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.6h2.6l.4-3h-3V8.4c0-.9.2-1.5 1.5-1.5h1.6V4.3C15.9 4.2 15 4.1 14 4.1c-2.3 0-3.9 1.4-3.9 4v2.3H7.5v3H10V21h3.5z"/></svg></a>
         </div>
-        <div class="swatches" role="group" aria-label="Accent color">
-          <span>Pick your color:</span>
-          <button class="swatch" style="background:#0BC90F" data-c="#0BC90F" aria-label="Green" aria-pressed="true"></button>
-          <button class="swatch" style="background:#F18502" data-c="#F18502" aria-label="Orange" aria-pressed="false"></button>
-          <button class="swatch" style="background:#00EAFF" data-c="#00EAFF" aria-label="Cyan" aria-pressed="false"></button>
-          <button class="swatch" style="background:#A90CC4" data-c="#A90CC4" aria-label="Magenta" aria-pressed="false"></button>
-          <button class="swatch" style="background:#BD1207" data-c="#BD1207" aria-label="Red" aria-pressed="false"></button>
-        </div>
       </div>
-      <div class="shot"><img src="screenshots/1.png" alt="Planis world map with visited countries" onerror="this.parentNode.classList.add('empty');this.parentNode.textContent='screenshots/1.png'"></div>
+      <div class="hero-shot"><img src="screenshots/1.png" alt="Planis app screenshot" onerror="this.parentNode.classList.add('shot','empty');this.parentNode.textContent='screenshots/1.png'"></div>
     </div>
   </section>
 
@@ -71,48 +90,37 @@
 
   <section id="features">
     <div class="wrap">
-      <div class="section-head">
-        <h2>One app for the trips you took and the ones you plan.</h2>
+      <div class="section-head"><h2>One app for the trips you took and the ones you plan.</h2></div>
+      <div class="feat-grid">
+        <div class="feat card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v14l-6 3V6l6-3zm0 0l6 3m-6-3v14m6-11v14l6 3V9l-6-3z"/></svg></div><h3>Hand-drawn world map</h3><p>Visited countries are colored with your accent color. Switch between country and city views, with smooth zoom and a home marker.</p></div>
+        <div class="feat card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h4l2-6 4 12 2-6h4"/></svg></div><h3>Travel diary &amp; planner</h3><p>Log every stop with dates and means of transport. Upcoming trips get their own outline, past trips are grouped by year, and each trip can hold notes.</p></div>
+        <div class="feat card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10m7 10V4m7 16v-7"/></svg></div><h3>World statistics</h3><p>Countries, capitals, continents, days on the road and your favorite way to travel, with a dedicated map for each continent.</p></div>
+        <div class="feat card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.600-7 10-7 10z"/></svg></div><h3>Favorite cities</h3><p>Build a bucket list of the places you love or dream of visiting, and turn any of them into a trip with one tap.</p></div>
+        <div class="feat card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0-12l-4 4m4-4l4 4M5 13v6h14v-6"/></svg></div><h3>Share &amp; backup</h3><p>Create images of your stats for social media, share a single trip with a friend, and back up everything to a JSON file.</p></div>
+        <div class="feat card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.300 6.500-3.800 9c-2.500-2.500-3.800-5.700-3.800-9s1.300-6.500 3.800-9z"/></svg></div><h3>Your language, your names</h3><p>English, Italiano and Deutsch, with city, region and country names translated automatically.</p></div>
       </div>
-      <div class="feature card">
-        <div class="feature-text">
-          <h3>A hand-drawn world map</h3>
-          <p>Visited countries are colored with your favorite accent color. Switch between country and city views, tap any nation to see its main cities, and find your home city with a dedicated marker.</p>
-          <div class="tags"><span>Country &amp; city views</span><span>Smooth zoom</span><span>Home marker</span></div>
-        </div>
-        <div class="shot"><img src="screenshots/2.png" alt="Interactive map" onerror="this.parentNode.classList.add('empty');this.parentNode.textContent='screenshots/2.png'"></div>
-      </div>
-      <div class="feature card flip">
-        <div class="feature-text">
-          <h3>Travel diary &amp; trip planner</h3>
-          <p>Log each trip with its stops, means of transport and dates. Upcoming trips get their own outline on the map, past trips are organized by year, and every trip can hold notes and memories.</p>
-          <div class="tags"><span>Multi-stop trips</span><span>Future trips</span><span>Notes</span></div>
-        </div>
-        <div class="shot"><img src="screenshots/3.png" alt="Trip list" onerror="this.parentNode.classList.add('empty');this.parentNode.textContent='screenshots/3.png'"></div>
-      </div>
-      <div class="feature card">
-        <div class="feature-text">
-          <h3>Statistics about your world</h3>
-          <p>See how many countries and capitals you visited, your favorite means of transport and the share of each continent you explored. Every continent has its own map.</p>
-          <div class="tags"><span>Countries &amp; capitals</span><span>Per continent</span><span>Filter by year</span></div>
-        </div>
-        <div class="shot"><img src="screenshots/4.png" alt="Travel statistics" onerror="this.parentNode.classList.add('empty');this.parentNode.textContent='screenshots/4.png'"></div>
-      </div>
-      <div class="feature card flip">
-        <div class="feature-text">
-          <h3>Favorite cities &amp; bucket list</h3>
-          <p>Save the cities you love and the ones you dream of visiting, then turn any of them into a new trip with one tap.</p>
-          <div class="tags"><span>Bucket list</span><span>Quick add to a trip</span></div>
-        </div>
-        <div class="shot"><img src="screenshots/5.png" alt="Favorite cities" onerror="this.parentNode.classList.add('empty');this.parentNode.textContent='screenshots/5.png'"></div>
-      </div>
-      <div class="feature card">
-        <div class="feature-text">
-          <h3>Share your stats</h3>
-          <p>Create an image for social media with your explored-world percentage and your country and city maps. You can also share a single trip with a friend, who imports it with a tap.</p>
-          <div class="tags"><span>Social images</span><span>Share a trip</span><span>JSON backup</span></div>
-        </div>
-        <div class="shot"><img src="screenshots/6.png" alt="Sharing statistics" onerror="this.parentNode.classList.add('empty');this.parentNode.textContent='screenshots/6.png'"></div>
+    </div>
+  </section>
+
+  <section id="screenshots" style="padding-left:0;padding-right:0">
+    <div class="wrap"><div class="section-head"><h2>See it in action</h2></div></div>
+    <div class="gallery">
+      <img src="screenshots/1.png" alt="Planis screenshot 1" loading="lazy" onerror="this.outerHTML='<div class=ph>screenshots/1.png</div>'">
+      <img src="screenshots/2.png" alt="Planis screenshot 2" loading="lazy" onerror="this.outerHTML='<div class=ph>screenshots/2.png</div>'">
+      <img src="screenshots/3.png" alt="Planis screenshot 3" loading="lazy" onerror="this.outerHTML='<div class=ph>screenshots/3.png</div>'">
+      <img src="screenshots/4.png" alt="Planis screenshot 4" loading="lazy" onerror="this.outerHTML='<div class=ph>screenshots/4.png</div>'">
+      <img src="screenshots/5.png" alt="Planis screenshot 5" loading="lazy" onerror="this.outerHTML='<div class=ph>screenshots/5.png</div>'">
+      <img src="screenshots/6.png" alt="Planis screenshot 6" loading="lazy" onerror="this.outerHTML='<div class=ph>screenshots/6.png</div>'">
+    </div>
+  </section>
+
+  <section id="review">
+    <div class="wrap">
+      <div class="review card">
+        <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.600.9-4.800 4.600 1.200 6.500L12 17.300 6.100 20.500l1.200-6.500L2.500 9.400l6.600-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.600.9-4.800 4.600 1.200 6.500L12 17.300 6.100 20.500l1.200-6.500L2.500 9.400l6.600-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.600.9-4.800 4.600 1.200 6.500L12 17.300 6.100 20.500l1.200-6.500L2.500 9.400l6.600-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.600.9-4.800 4.600 1.200 6.500L12 17.300 6.100 20.500l1.200-6.500L2.500 9.400l6.600-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.600.9-4.800 4.600 1.200 6.500L12 17.300 6.100 20.500l1.200-6.500L2.500 9.400l6.600-.9z"/></svg></div>
+        <h2>Enjoying Planis? Leave a review</h2>
+        <p>Planis is built by a single developer. A rating on Google Play helps other travelers find the app and helps me keep improving it.</p>
+        <a class="badge" href="https://play.google.com/store/apps/details?id=com.rzerodev.planis" target="_blank" rel="noopener"><img src="google-play-badge.png" alt="Leave a review on Google Play" onerror="var a=this.parentNode;a.className='btn btn-primary';a.textContent='Leave a review on Google Play'"></a>
       </div>
     </div>
   </section>
@@ -134,7 +142,7 @@
     <div class="wrap">
       <div class="cta card">
         <div><h2>Start mapping your world</h2><p>Download Planis and mark your first country.</p></div>
-        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.rzerodev.planis" target="_blank" rel="noopener">Get it on Google Play</a>
+        <a class="badge" href="https://play.google.com/store/apps/details?id=com.rzerodev.planis" target="_blank" rel="noopener"><img src="google-play-badge.png" alt="Get it on Google Play" onerror="var a=this.parentNode;a.className='btn btn-primary';a.textContent='Get it on Google Play'"></a>
       </div>
     </div>
   </section>
@@ -150,22 +158,5 @@
     </div>
   </div>
 </footer>
-<script>document.getElementById('anno').textContent = new Date().getFullYear();</script>
-<script>
-(function () {
-  var sw = document.querySelectorAll('.swatch');
-  function set(c) {
-    document.documentElement.style.setProperty('--accent', c);
-    sw.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.c === c)); });
-  }
-  try { var s = localStorage.getItem('accent'); if (s) set(s); } catch (e) {}
-  sw.forEach(function (b) {
-    b.addEventListener('click', function () {
-      set(b.dataset.c);
-      try { localStorage.setItem('accent', b.dataset.c); } catch (e) {}
-    });
-  });
-})();
-</script>
 </body>
 </html>
