@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rzerodeveloper.github.io/planis-privacy/sitemap.xml
