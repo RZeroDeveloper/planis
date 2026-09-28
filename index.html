@@ -1,95 +1,181 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informativa sulla Privacy — Planis</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #111;
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #222;
-            margin-top: 30px;
-        }
-        p, ul {
-            margin-bottom: 15px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        .date {
-            font-style: italic;
-            color: #666;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planis — Mappa dei paesi visitati e diario di viaggio</title>
+<meta name="description" content="Planis è il travel tracker con mappa del mondo disegnata a mano: segna i paesi visitati, pianifica i prossimi viaggi e guarda le tue statistiche. Privata e gratuita su Google Play.">
+<meta property="og:title" content="Planis — Mappa dei paesi visitati">
+<meta property="og:description" content="Traccia i tuoi viaggi, tieni un diario e scopri quanto mondo hai esplorato.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="icon.png">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Informativa sulla Privacy — Planis</h1>
-    <p class="date">Ultimo aggiornamento: agosto 2026</p>
+<header class="site">
+  <div class="wrap site-bar">
+    <a class="logo" href="#top">
+      <img class="logo-img" src="icon.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <svg style="display:none" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#22303A" stroke-width="2" fill="#FBF6EA"/><path d="M9 20 C12 12, 14 12, 16 16 C18 20, 20 20, 23 12" stroke="#F18502" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-dasharray="1 4.2"/></svg>
+      Planis
+    </a>
+    <nav class="site-nav">
+      <a href="#funzionalita">Funzionalità</a>
+      <a href="#faq">Domande</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <a class="btn btn-primary btn-small" href="https://play.google.com/store/apps/details?id=com.rzerodev.planis" target="_blank" rel="noopener">Scarica l'app</a>
+  </div>
+</header>
 
-    <h2>1. Introduzione</h2>
-    <p>Planis ("l'app", "noi") è un'applicazione mobile per il tracciamento personale dei viaggi. Questa informativa sulla privacy descrive come l'app gestisce le informazioni degli utenti.</p>
+<main id="top">
 
-    <h2>2. Raccolta dei dati</h2>
-    <p>Planis non raccoglie, trasmette né condivide alcun dato personale con server esterni o terze parti.</p>
-    <p>Tutti i dati inseriti dall'utente (viaggi, tappe, città preferite, note, preferenze) sono salvati esclusivamente sul dispositivo locale dell'utente, all'interno del database privato dell'app.</p>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow-route" aria-hidden="true">
+          <svg viewBox="0 0 22 14"><path d="M1 12 C6 2, 10 2, 11 7 C12 12, 16 12, 21 2" stroke="#0F7A78" stroke-width="1.6" fill="none" stroke-dasharray="0.5 3.2" stroke-linecap="round"/></svg>
+          <span>Travel tracker, diario e pianificatore</span>
+        </div>
+        <h1 class="hero-title">Colora il mondo che hai già visto.</h1>
+        <p class="hero-sub">Segna i paesi e le città dei tuoi viaggi su una mappa disegnata a mano, tieni il diario di ogni tappa e scopri quanta parte del mondo hai esplorato.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.rzerodev.planis" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 3.5 L21 12 L3 20.5 Z" fill="#fffaf1"/></svg>
+            Scarica su Google Play
+          </a>
+          <a class="btn btn-ghost" href="#funzionalita">Scopri di più</a>
+        </div>
+        <div class="social-row">
+          <!-- TODO: sostituisci gli href "#" con i link reali dei tuoi profili -->
+          <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="Planis su Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="Planis su TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.5 3h2.6c.2 1.7 1.4 3.1 3.1 3.5v2.7c-1.3-.1-2.5-.5-3.5-1.2v6.4c0 3.1-2.5 5.6-5.6 5.6S5.5 17.5 5.5 14.4c0-3 2.3-5.4 5.2-5.6v2.8c-1.4.2-2.5 1.4-2.5 2.8 0 1.6 1.3 2.9 2.9 2.9s2.9-1.3 2.9-2.9V3z"/></svg>
+          </a>
+          <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="Planis su Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.6h2.6l.4-3h-3V8.4c0-.9.2-1.5 1.5-1.5h1.6V4.3C15.9 4.2 15 4.1 14 4.1c-2.3 0-3.9 1.4-3.9 4v2.3H7.5v3H10V21h3.5z"/></svg>
+          </a>
+        </div>
+      </div>
 
-    <h2>3. Dati salvati localmente</h2>
-    <p>L'app salva sul dispositivo le seguenti informazioni, fornite volontariamente dall'utente:</p>
-    <ul>
-        <li>Viaggi e tappe (città, date, mezzo di trasporto, note)</li>
-        <li>Città preferite</li>
-        <li>Città di residenza</li>
-        <li>Preferenze dell'app (lingua, tema, colore)</li>
-    </ul>
-    <p>Questi dati non lasciano mai il dispositivo dell'utente, salvo esplicita azione di esportazione da parte dell'utente stesso (vedi punto 5).</p>
+      <div class="hero-art">
+        <div class="shot"><img src="screenshots/1.png" alt="Mappa del mondo di Planis con i paesi visitati" onerror="this.parentNode.classList.add('empty');this.parentNode.textContent='screenshots/1.png'"></div>
+        <div class="stamp stamp-1" style="top:-18px; left:-14px;">TUTTO<br>QUI</div>
+        <div class="stamp stamp-2" style="bottom:-16px; right:-10px;">200K<br>CITTÀ</div>
+      </div>
+    </div>
+  </section>
 
-    <h2>4. Dati non raccolti</h2>
-    <p>Planis non raccoglie e non ha accesso a:</p>
-    <ul>
-        <li>Nome, email o qualsiasi dato identificativo</li>
-        <li>Posizione GPS in tempo reale</li>
-        <li>Dati di utilizzo o analytics</li>
-        <li>Dati di crash o diagnostica</li>
-        <li>Identificatori pubblicitari</li>
-        <li>Contatti, fotocamera, microfono o altre risorse del dispositivo</li>
-    </ul>
+  <section style="padding-top:30px">
+    <div class="wrap stats">
+      <div class="stat-item"><div class="stat-num">200.000+</div><div class="stat-txt">città con ricerca offline</div></div>
+      <div class="stat-item"><div class="stat-num">3 lingue</div><div class="stat-txt">Italiano, English, Deutsch</div></div>
+      <div class="stat-item"><div class="stat-num">0 dati</div><div class="stat-txt">raccolti o condivisi</div></div>
+      <div class="stat-item"><div class="stat-num">Nessun account</div><div class="stat-txt">tutto resta sul tuo telefono</div></div>
+    </div>
+  </section>
 
-    <h2>5. Esportazione dei dati</h2>
-    <p>L'app offre una funzione di esportazione che permette all'utente di salvare i propri dati in un file JSON sul proprio dispositivo. Questa operazione è interamente sotto il controllo dell'utente — l'app non invia automaticamente dati da nessuna parte.</p>
+  <section id="funzionalita">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Cosa fa Planis</div>
+        <h2>Un unico posto per i viaggi fatti e quelli da fare.</h2>
+      </div>
 
-    <h2>6. Cancellazione dei dati</h2>
-    <p>L'utente può eliminare tutti i dati salvati dall'app in qualsiasi momento tramite la funzione "Cancella tutti i dati" nella sezione Impostazioni dell'app. La disinstallazione dell'app rimuove automaticamente tutti i dati locali dal dispositivo.</p>
+      <div class="row">
+        <div class="row-text">
+          <h3>Una mappa del mondo disegnata a mano</h3>
+          <p>I paesi visitati si colorano con il tuo colore preferito. Passa dalla vista nazioni a quella città, tocca un paese per vedere le sue città principali e trova subito la tua città con il marker dedicato.</p>
+          <div class="tags"><span>Vista nazioni e città</span><span>Zoom fluido</span><span>Marker casa</span></div>
+        </div>
+        <div class="shot"><img src="screenshots/2.png" alt="Mappa interattiva" onerror="this.parentNode.classList.add('empty');this.parentNode.textContent='screenshots/2.png'"></div>
+      </div>
 
-    <h2>7. Connessione a Internet</h2>
-    <p>L'app richiede il permesso di acesso a Internet esclusivamente per il caricamento dei dati cartografici necessari al funzionamento della mappa. Nessun dato personale dell'utente viene trasmesso durante questa operazione.</p>
+      <div class="row flip">
+        <div class="row-text">
+          <h3>Diario di viaggio e pianificatore</h3>
+          <p>Registra ogni viaggio con tappe, mezzi di trasporto e date. I viaggi futuri hanno un bordo dedicato sulla mappa, quelli passati sono organizzati per anno. Aggiungi note e ricordi a ogni viaggio.</p>
+          <div class="tags"><span>Viaggi multi-tappa</span><span>Viaggi futuri</span><span>Note e ricordi</span></div>
+        </div>
+        <div class="shot"><img src="screenshots/3.png" alt="Elenco dei viaggi" onerror="this.parentNode.classList.add('empty');this.parentNode.textContent='screenshots/3.png'"></div>
+      </div>
 
-    <h2>8. Sicurezza</h2>
-    <p>Poiché tutti i dati rimangono sul dispositivo locale, la sicurezza dei dati dipende dalla sicurezza del dispositivo dell'utente (es. blocco schermo, cifratura del dispositivo).</p>
+      <div class="row">
+        <div class="row-text">
+          <h3>Statistiche sul tuo mondo</h3>
+          <p>Quanti paesi e capitali hai visitato, il tuo mezzo preferito, la percentuale esplorata per ogni continente e i giorni passati in viaggio. Ogni continente ha la sua mappa dedicata.</p>
+          <div class="tags"><span>Paesi e capitali</span><span>Per continente</span><span>Filtro per anno</span></div>
+        </div>
+        <div class="shot"><img src="screenshots/4.png" alt="Statistiche di viaggio" onerror="this.parentNode.classList.add('empty');this.parentNode.textContent='screenshots/4.png'"></div>
+      </div>
 
-    <h2>9. Privacy dei minori</h2>
-    <p>Planis non è destinata a utenti di età inferiore ai 13 anni e non raccoglie consapevolmente dati di minori.</p>
+      <div class="row flip">
+        <div class="row-text">
+          <h3>Città preferite e bucket list</h3>
+          <p>Salva le città che ami di più e quelle che sogni di visitare, poi trasformale in un nuovo viaggio con un tocco.</p>
+          <div class="tags"><span>Bucket list</span><span>Aggiunta rapida al viaggio</span></div>
+        </div>
+        <div class="shot"><img src="screenshots/5.png" alt="Città preferite" onerror="this.parentNode.classList.add('empty');this.parentNode.textContent='screenshots/5.png'"></div>
+      </div>
 
-    <h2>10. Modifiche a questa informativa</h2>
-    <p>Eventuali modifiche a questa informativa saranno comunicate tramite aggiornamento dell'app. La data di "Ultimo aggiornamento" in cima al documento sarà aggiornata di conseguenza.</p>
+      <div class="row">
+        <div class="row-text">
+          <h3>Condividi le tue statistiche</h3>
+          <p>Crea un'immagine pronta per i social con la percentuale di mondo esplorato, la mappa dei paesi e delle città visitate. Puoi anche condividere un singolo viaggio con un amico, che lo importa con un tocco.</p>
+          <div class="tags"><span>Immagini per i social</span><span>Condividi un viaggio</span><span>Backup JSON</span></div>
+        </div>
+        <div class="shot"><img src="screenshots/6.png" alt="Condivisione delle statistiche" onerror="this.parentNode.classList.add('empty');this.parentNode.textContent='screenshots/6.png'"></div>
+      </div>
+    </div>
+  </section>
 
-    <h2>11. Contatti</h2>
-    <p>Per domande o richieste relative alla privacy, è possibile contattarci all'indirizzo email: r.zero.developer@gmail.com</p>
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Domande frequenti</div>
+        <h2>Prima di scaricare</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Serve un account?</summary><p>No. Planis non richiede registrazione: apri l'app e inizi a segnare i tuoi viaggi.</p></details>
+        <details><summary>Dove vengono salvati i miei dati?</summary><p>Solo sul tuo dispositivo. Planis non raccoglie e non condivide dati con terze parti.</p></details>
+        <details><summary>Come non perdo i miei viaggi se cambio telefono?</summary><p>Da Impostazioni puoi esportare tutti i viaggi in un file JSON e importarli sul nuovo dispositivo.</p></details>
+        <details><summary>In che lingue è disponibile?</summary><p>Italiano, English e Deutsch. Anche i nomi di città, regioni e nazioni vengono tradotti nella lingua scelta.</p></details>
+        <details><summary>Manca una città o un luogo?</summary><p>Dalle Impostazioni puoi segnalare un luogo mancante: l'invio apre la tua app email.</p></details>
+      </div>
+    </div>
+  </section>
 
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Inizia a mappare il tuo mondo</h2>
+          <p>Scarica Planis e segna il primo paese sulla mappa.</p>
+        </div>
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.rzerodev.planis" target="_blank" rel="noopener">Scarica su Google Play</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap footer-grid">
+    <span>© <span id="anno"></span> Planis — R. Zero Dev</span>
+    <div class="footer-links">
+      <a href="privacy.html">Informativa sulla privacy</a>
+      <a href="mailto:r.zero.developer@gmail.com">Contatti</a>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('anno').textContent = new Date().getFullYear();</script>
 </body>
 </html>
