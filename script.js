@@ -34,4 +34,17 @@
     document.addEventListener('click', function (e) { if (prefs && !prefs.contains(e.target)) prefs.removeAttribute('open'); });
     var y = document.getElementById('anno'); if (y) y.textContent = new Date().getFullYear();
   });
+
+    // video: l'iframe YouTube viene creato solo al click sulla miniatura
+  document.addEventListener('click', function (e) {
+    var facade = e.target.closest('.video-facade');
+    if (!facade) return;
+    var frame = document.createElement('iframe');
+    frame.className = 'video-frame';
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + facade.dataset.yt + '?autoplay=1&rel=0&playsinline=1';
+    frame.title = 'Planis presentation video';
+    frame.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen';
+    frame.allowFullscreen = true;
+    facade.replaceWith(frame);
+  });
 })();
